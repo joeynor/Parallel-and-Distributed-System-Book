@@ -8,7 +8,7 @@ if comm.Get_size() != 2:
         print("Run with exactly 2 ranks", flush=True)
     raise SystemExit(1)
 
-warmup, repetitions = 100, 1000
+warmup, repetitions = 10000, 1000000
 # One byte; use buffer communication to avoid object pickling.
 token = np.zeros(1, dtype=np.uint8)
 start = 0.0
