@@ -25,6 +25,7 @@ if n is None:
     raise SystemExit(1)
 
 if rank == 0:
+# now working in creating chunks
     data = list(range(1, n + 1))
     q, remainder = divmod(n, size)
     counts = [q + (r < remainder) for r in range(size)]
